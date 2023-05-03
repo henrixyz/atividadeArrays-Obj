@@ -33,17 +33,5 @@ function validar(){
                     <hr>`
     res.innerHTML += `${filme.personagem.a1} faz ${filme.personagem.p1}<p>
                     ${filme.personagem.a2} faz ${filme.personagem.p2}  `
-                    
-                    
-
-
-
-
-    // console.log(`${filme.nome}`)
-    // console.log(`${filme.ano}`)
-    // console.log(`${filme.diretor}`)
-    // console.log(`${filme.genero}`)
-    console.log(`${filme.personagem.a1}`)
-    // console.log(`${filme.genero}`)
 
 }
