@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio 2</title>
+    
+</head>
+<body>
+
+    <div>
+        <input type="text" name="txtn" id="nome" placeholder="nome da emp.">
+        <input type="number" name="txth" id="hora" placeholder="horas estimadas">
+        conluído:<input type="text" name="txtc" id="con" placeholder="(sim/não)">
+    </div>
+    <div>
+        <input type="button" value="validar" onclick="validar()">
+    </div>
+    <div id="res"> </div>
+    <script>
+
+        function validar(){
+        var inf=[]
+
+        inf[0] = document.querySelector('#nome').value
+        inf[1] = document.querySelector('#hora').value
+        inf[2] = document.querySelector('#con').value
+        if (inf[2]=="sim"){
+            inf[2]=true
+        }else if (inf[2]=="não"){
+            inf[2]=false
+        }else{
+            alert('[ERRO] verifique os dados e tente novamente!')
+        }
+        var r = document.querySelector('#res')
+            r.innerHTML = `sua empresa se chama <strong>${inf[0]}</strong>\nn`
+            r.innerHTML += `o tanto de horas estimadas é <strong>${inf[1]}</strong>`
+
+        if (inf[2]=="true"){
+            r.innerHTML += `e <strong>${inf[2]}</strong> [PROJETO CONCLUÍDO]`
+        }else if (inf[2]=="false"){
+            r.innerHTML += `e <strong>${inf[2]}</strong> [PROJETO INCONCLUÍDO]`
+        }else{
+            alert('algo deu errado')
+        }
+        }
+    </script>
+</body>
+</html>
